@@ -33,7 +33,7 @@ int main()
     printf("Enter a number larger or equal to 10: ");
     scanf("%d",&num);
 
-    while(num > 0)
+    while(num)
     {
         if(num > INT_MAX){ // Largest possible Int value
             printf("Number is too large!\n");
@@ -41,6 +41,10 @@ int main()
         }
         else if(num < 10){
             printf("Number is too small!\n");
+            break;
+        }
+        else if(num <= 0){
+            printf("Number cannot be negative!\n");
             break;
         }
         else{
