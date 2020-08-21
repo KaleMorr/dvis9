@@ -38,8 +38,8 @@ int main()
 
     while(num)
     {
-        if(num1 > INT_MAX - num || num <= 0){ // Checks if Int is overflowing or in negative
-            printf("Number is out of range or is in negative\n");
+        if(num1 > INT_MAX - num && num <= 0){ // Checks if Int is overflowing or in negative
+            printf("Number is out of range or a negative\n");
             return -1; // Return to a negative
         }
         else if(num < 10){ // Checks if number is between 1 and 10
