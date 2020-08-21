@@ -23,28 +23,27 @@
 #include<stdio.h>
 #include<limits.h>
 
+
 int main()
 {
     /* Initialize the Number and Result */
     int num;
     int result;
+    int num1 = 2147483627;
 
-    /* User inputted number points into Num */
+    /* User input points into Num */
     printf("Enter a number larger or equal to 10: ");
     scanf("%d",&num);
 
+
     while(num)
     {
-        if(num > INT_MAX){ // Largest possible Int value
-            printf("Number is too large!\n");
-            break;
+        if(num1 > INT_MAX - num || num <= 0){ // Checks if Int is overflowing or in negative
+            printf("Number is out of range or is in negative\n");
+            return -1; // Return to a negative
         }
-        else if(num < 10){
+        else if(num < 10){ // Checks if number is between 1 and 10
             printf("Number is too small!\n");
-            break;
-        }
-        else if(num <= 0){
-            printf("Number cannot be negative!\n");
             break;
         }
         else{
@@ -59,7 +58,7 @@ int main()
                 break;
             }
             else{
-                printf("You have just proved the Matrix is real with %d\n", result);
+                printf("You just proved the Matrix is real with %d\n", result);
                 break;
             }
         }
