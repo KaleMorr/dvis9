@@ -36,15 +36,12 @@ int main()
     scanf("%d",&num);
 
 
-    while(num)
-    {
         if(num1 > INT_MAX - num && num <= 0){ // Checks if Int is overflowing or in negative
             printf("Number is out of range or a negative\n");
             return -1; // Return to a negative
         }
         else if(num < 10){ // Checks if number is between 1 and 10
             printf("Number is too small!\n");
-            break;
         }
         else{
 
@@ -55,14 +52,11 @@ int main()
 
             if(result % 9 == 0){ // Prove a number is divisible by 9
                 printf("The number %d is divisible by 9.\n", result); // Output final result
-                break;
             }
             else{
                 printf("You just proved the Matrix is real with %d\n", result);
-                break;
             }
         }
-    }
 
 
     return 0;
